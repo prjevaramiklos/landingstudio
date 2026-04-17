@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XCH6SX1ML6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XCH6SX1ML6');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Studio | Hatékony egyoldalas weboldalak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1d1d1f;
+            --accent: #0066cc;
+            --soft-gray: #f5f5f7;
+            --border: #d2d2d7;
+            --dark-section: #1d1d1f;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            font-weight: 500;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Hero szekció - Sűrített magasság, hogy minden látsszon görgetés nélkül */
+        .hero-with-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 40px 60px 40px; 
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1.2;
+            text-align: left;
+        }
+
+        h1 { 
+            font-size: 3.8rem; 
+            font-weight: 700; 
+            letter-spacing: -0.04em; 
+            margin-bottom: 15px; 
+            line-height: 1.05; 
+            margin-top: 0; 
+        }
+
+        .hero-text p { 
+            font-size: 1.4rem; 
+            color: #86868b; 
+            margin-bottom: 35px; 
+            font-weight: 300; 
+            max-width: 480px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            max-width: 500px; 
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .btn { 
+            background: var(--text); 
+            color: white; 
+            padding: 18px 50px; 
+            text-decoration: none; 
+            border-radius: 100px; 
+            font-weight: 500; 
+            font-size: 1rem; 
+            display: inline-block; 
+            transition: all 0.2s; 
+        }
+        
+        .btn:hover { background: var(--accent); transform: scale(1.02); }
+
+        /* Részletek szekció */
+        .details { background-color: var(--soft-gray); padding: 80px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .card { background: white; padding: 40px; border-radius: 24px; border: 1px solid var(--border); }
+        .card h3 { font-size: 1.5rem; margin-top: 0; margin-bottom: 15px; }
+
+        /* Kiemelt "Miért" szekció */
+        .demo-highlight { padding: 100px 20px; background-color: var(--dark-section); color: white; text-align: center; }
+        .demo-container { max-width: 900px; margin: 0 auto; }
+        .demo-tag { display: inline-block; padding: 6px 14px; background: var(--accent); color: white; border-radius: 5px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; }
+        .demo-highlight h2 { font-size: 3rem; margin-bottom: 30px; letter-spacing: -0.02em; }
+        .demo-text-box { font-size: 1.4rem; line-height: 1.6; color: #a1a1a6; font-weight: 300; max-width: 700px; margin: 0 auto; }
+        .demo-text-box strong { color: white; font-weight: 600; }
+
+        .live-example { margin-top: 50px; padding: 30px; border: 1px solid #424245; border-radius: 20px; display: inline-block; }
+        .live-example span { display: block; font-size: 0.9rem; color: #86868b; margin-bottom: 10px; }
+        .live-example p { margin: 0; font-size: 1.2rem; color: var(--accent); font-weight: 500; }
+
+        /* CTA és Ár szekció */
+        .cta-section { padding: 100px 20px; text-align: center; background-color: var(--bg); }
+        .price { font-size: 5rem; font-weight: 700; margin: 10px 0; letter-spacing: -2px; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        
+        /* Elérhetőség lábléc */
+        .contact-footer { padding: 60px 20px; max-width: 1000px; margin: 50px auto 0 auto; border-top: 1px solid var(--border); display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; text-align: center; }
+        .contact-item h4 { margin: 0; font-size: 0.8rem; color: #86868b; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-item p { margin: 8px 0 0 0; font-size: 1.2rem; font-weight: 500; }
+
+        footer { padding: 40px 20px; text-align: center; color: #a1a1a6; font-size: 0.8rem; background-color: var(--soft-gray); }
+
+        /* Mobil nézet optimalizálás */
+        @media (max-width: 768px) {
+            .hero-with-image { padding: 30px 20px; flex-direction: column; text-align: center; gap: 30px; }
+            .hero-text { text-align: center; display: flex; flex-direction: column; align-items: center; }
+            h1 { font-size: 2.8rem; }
+            .hero-text p { font-size: 1.2rem; }
+            .price { font-size: 3.5rem; }
+            .demo-highlight h2 { font-size: 2.2rem; }
+            .contact-footer { flex-direction: column; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>Landing Studio - powered by Klikkprofit</nav>
+
+    <section class="hero-with-image">
+        <div class="hero-text">
+            <h1>Tiszta kód.<br>Tiszta fókusz.<br>Több ügyfél.</h1>
+            <p>Egyetlen, tűpontosan megtervezett landing oldal, ami az érdeklődőket vásárlókká alakítja.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf92OGbKNekhtuMSNVCSCNkJw5JFePH_wtjPx1JSnV5vc-QDw/viewform?usp=header" class="btn">Projekt indítása</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Letisztult fejlesztői környezet">
+        </div>
+    </section>
+
+    <section class="details">
+        <div class="grid">
+            <div class="card">
+                <h3>🎯 Hirdetésre kész</h3>
+                <p>Google vagy Meta kampányt indítanál? Ezek az oldalak arra lettek tervezve, hogy a hirdetési költséged konverziót hozzon.</p>
+            </div>
+            <div class="card">
+                <h3>📊 Mérhető adatok</h3>
+                <p>Beépített GA4 támogatás. Pontosan látni fogod, hányan kattintottak és mit csináltak az oldaladon.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Maximális sebesség</h3>
+                <p>A tiszta kód miatt az oldal tizedmásodpercek alatt betölt. Nincs több lemorzsolódó látogató.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo-highlight">
+        <div class="demo-container">
+            <div class="demo-tag">Élő referencia</div>
+            <h2>Miért csak egyetlen oldal?</h2>
+            <div class="demo-text-box">
+                <p>A klasszikus weboldalakon a látogató elvész a menüpontok között. A <strong>Landing Page</strong> egyetlen útvonalat kínál: a kapcsolatfelvételt. Nincs zavaró tényező, csak az <strong>Ön ajánlata</strong> és az eredmény.</p>
+            </div>
+            <div class="live-example">
+                <span>A számok nem hazudnak.</span>
+                <p>Ön most egy olyan felületet lát, ami pontosan azt teszi, amire tervezték: megragadja és megtartja a figyelmet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="ajanlat">
+        <h2>Fix áras landing csomag</h2>
+        <p style="color: #86868b; font-size: 1.2rem;">Design, kódolás, analitika és publikálás.</p>
+        <div class="price">30.000 Ft</div>
+        <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf92OGbKNekhtuMSNVCSCNkJw5JFePH_wtjPx1JSnV5vc-QDw/viewform?usp=header" class="btn">Kérem a landing oldalam</a>
+
+        <div class="contact-footer">
+            <div class="contact-item">
+                <h4>E-mail</h4>
+                <p>hello@klikkprofit.hu</p>
+            </div>
+            <div class="contact-item">
+                <h4>Telefon</h4>
+                <p>+36 30 982 7397</p>
+            </div>
+            <div class="contact-item">
+                <h4>Helyszín</h4>
+                <p>Online / Országos</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Egyedi HTML fejlesztés | 48 órás szállítási határidő</p>
+        <p>&copy; 2026 Landing Studio. Minden jog fenntartva.</p>
+    </footer>
+
+</body>
+</html>
